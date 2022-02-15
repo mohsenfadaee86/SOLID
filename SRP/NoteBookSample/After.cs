@@ -120,7 +120,7 @@ namespace SRP.NoteBookSample.After
                 Notes.Remove(targetNote);
         }
 
-        public Note getNoteById(Guid noteId)
+        public Note? getNoteById(Guid noteId)
         {
             return Notes.Find(match: note => note.Id == noteId);
            

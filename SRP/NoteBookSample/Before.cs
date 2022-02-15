@@ -41,14 +41,14 @@ namespace SRP.NoteBookSample.Before
         }
         public void DeleteNote(Guid noteId)
         {
-            Note targetNote = Notes.Find(match: note => note.Id == noteId);
+            Note? targetNote = Notes.Find(match: note => note.Id == noteId);
             if (targetNote != null)
                 Notes.Remove(targetNote);
         }
 
         public string getNoteText(Guid noteId)
         {
-            Note targetNote = Notes.Find(match: note => note.Id == noteId);
+            Note? targetNote = Notes.Find(match: note => note.Id == noteId);
             if (targetNote != null)
                 return targetNote.Text;
             return "";
